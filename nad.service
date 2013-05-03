@@ -1,0 +1,14 @@
+[Unit]
+Description=NAD Amp on/off
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=root
+Group=root
+
+ExecStart=/usr/share/nad/nad.py on
+ExecStop=/usr/share/nad/nad.py off
+
+[Install]
+WantedBy=multi-user.target
